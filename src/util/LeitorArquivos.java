@@ -15,16 +15,15 @@ import java.io.Serializable;
  *
  * @author Emm
  */
-public class LeitorArquivos implements Serializable{
+public class LeitorArquivos implements Serializable {
 
     private static final long serialVersionUID = -1164222708545810708L;
-        
+
     public String lerArquivoConsulta(String tipoConsulta) throws FileNotFoundException, IOException {
 
         String caminho = "C:\\Users\\Emm\\Documents\\NetBeansProjects\\Tests_JDBC\\ConsultasSQL\\";
         String nomeArquivo = null;
         String consultaSQL = "";
-        
 
         switch (tipoConsulta) {
 
@@ -39,16 +38,10 @@ public class LeitorArquivos implements Serializable{
             case "Teste":
 
                 nomeArquivo = "funcaoTeste.sql";
-                
+
             case "criarBancoMySQL":
 
                 nomeArquivo = "criaBancoMySQL.sql";
-                
-            case "VALIDAÇÃO DADOS - PESSOA FÍSICA":
-
-                nomeArquivo = "VALIDAÇÃO DADOS - PESSOA FÍSICA.sql";
-                
-                
 
             default:
                 System.out.println("Consulta inválida");
@@ -62,18 +55,16 @@ public class LeitorArquivos implements Serializable{
             if (lineRead == null) {
                 eof = true;
             } else {
-             
-             consultaSQL += "\n"+ lineRead;
+
+                consultaSQL += "\n" + lineRead;
 
             }
         }
         buffRdr.close();
-  //SÓ USAREI SE CONTINUAR VINDO NULL NO INICÍO DA STRING      
+        //SÓ USAREI SE CONTINUAR VINDO NULL NO INICÍO DA STRING      
 //        consultaSQL = consultaSQL.substring(5);
-        
+
         return consultaSQL;
     }
 
-
 }
-

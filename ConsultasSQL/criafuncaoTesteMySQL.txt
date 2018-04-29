@@ -1,4 +1,4 @@
-CREATE PROCEDURE hello(IN nomePessoa VARCHAR(20), OUT resposta TEXT)
+ÔªøCREATE PROCEDURE hello(IN nomePessoa VARCHAR(20), OUT resposta TEXT)
 
 BEGIN   
 
@@ -11,10 +11,10 @@ WHERE nome = nomePessoa LIMIT 1;
 
 IF (encontrou = 'SIM') THEN
 
-SELECT CONCAT('O USU¡RIO ', nomePessoa,  ' FOI ENCONTRADO !') into resposta;
+SELECT CONCAT('O USU√ÅRIO ', nomePessoa,  ' FOI ENCONTRADO !') into resposta;
 
  ELSE
-     SELECT CONCAT('O USU¡RIO ', nomePessoa,  ' N√O FOI ENCONTRADO !') into resposta;
+     SELECT CONCAT('O USU√ÅRIO ', nomePessoa,  ' N√ÉO FOI ENCONTRADO !') into resposta;
 
 END IF;
 
